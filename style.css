@@ -1,0 +1,207 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background-color: #2e7d32; /* Verde Agro */
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: 2px solid transparent;
+    color: white;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-btn.active {
+    background-color: white;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* Container Principal */
+.container {
+    flex: 1;
+    max-width: 1000px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Sistema de Abas (Ocultar/Mostrar) */
+.aba-conteudo {
+    display: none;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.aba-conteudo.active {
+    display: block;
+}
+
+h2 {
+    color: #1b5e20;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
+.descricao {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Layout do Simulador */
+.painel-simulador {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .painel-simulador {
+        grid-template-columns: 1fr;
+    }
+}
+
+.controle-grupo {
+    margin-bottom: 1.5rem;
+}
+
+.controle-grupo label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.controle-grupo input[type="range"] {
+    width: 100%;
+    accent-color: #2e7d32;
+}
+
+/* Diagnóstico e Alertas */
+.diagnostico {
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 1.5rem;
+}
+
+.status-alerta {
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Cores de Status Dinâmicos */
+.status-otimo { background-color: #c8e6c9; color: #256029; }
+.status-atencao { background-color: #fff9c4; color: #827717; }
+.status-critico { background-color: #ffcdd2; color: #c62828; }
+
+.lista-detalhes {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.lista-detalhes li {
+    padding: 6px 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.sustentabilidade {
+    background: #e8f5e9;
+    border-left: 4px solid #2e7d32;
+    padding: 10px;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Estilização da Página Sobre Mim */
+.cartao-sobre {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.avatar {
+    font-size: 5rem;
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.texto-sobre p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Estilização da Página Agrinho */
+.conteudo-agrinho {
+    text-align: center;
+}
+
+.img-agrinho {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.conteudo-agrinho p {
+    text-align: justify;
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}

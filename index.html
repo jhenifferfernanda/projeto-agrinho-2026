@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 - Estufa Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">AgroSustentável</div>
+        <nav>
+            <button class="nav-btn active" onclick="mudarAba('simulador')">Simulador</button>
+            <button class="nav-btn" onclick="mudarAba('sobre-mim')">Sobre Mim</button>
+            <button class="nav-btn" onclick="mudarAba('agrinho')">O Concurso Agrinho</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="simulador" class="aba-conteudo active">
+            <h2>Simulador de Estufa Inteligente: Morangos</h2>
+            <p class="descricao">Ajuste os controles abaixo para encontrar o equilíbrio perfeito entre a produção eficiente e o uso sustentável de recursos (água e energia).</p>
+            
+            <div class="painel-simulador">
+                <div class="controles">
+                    <div class="controle-grupo">
+                        <label for="temp">Temperatura do Ar: <span id="val-temp">22</span>°C</label>
+                        <input type="range" id="temp" min="5" max="40" value="22" oninput="atualizarSimulacao()">
+                    </div>
+                    
+                    <div class="controle-grupo">
+                        <label for="umidade-ar">Umidade do Ar: <span id="val-umi-ar">70</span>%</label>
+                        <input type="range" id="umidade-ar" min="20" max="100" value="70" oninput="atualizarSimulacao()">
+                    </div>
+                    
+                    <div class="controle-grupo">
+                        <label for="umidade-solo">Umidade do Solo: <span id="val-umi-solo">65</span>%</label>
+                        <input type="range" id="umidade-solo" min="10" max="100" value="65" oninput="atualizarSimulacao()">
+                    </div>
+                </div>
+
+                <div class="diagnostico">
+                    <h3>Status da Estufa</h3>
+                    <div id="status-geral" class="status-alerta">Carregando...</div>
+                    <ul class="lista-detalhes">
+                        <li id="status-temp">Temperatura: OK</li>
+                        <li id="status-ar">Umidade do Ar: OK</li>
+                        <li id="status-solo">Umidade do Solo: OK</li>
+                    </ul>
+                    <div class="sustentabilidade">
+                        <h4>Impacto Ambiental</h4>
+                        <p id="status-sustentavel">Analisando eficiência...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mim" class="aba-conteudo">
+            <h2>Sobre o Desenvolvedor</h2>
+            <div class="cartao-sobre">
+                <div class="avatar">👨‍💻</div>
+                <div class="texto-sobre">
+                    <h3>Estudante do 3º Ano do Ensino Médio</h3>
+                    <p>Olá! Seja bem-vindo ao meu projeto para o Concurso Agrinho 2026. Desenvolvi este simulador com o objetivo de demonstrar como a tecnologia e a automação no campo podem transformar a produção agrícola, tornando-a mais forte, produtiva e, acima de tudo, em perfeito equilíbrio com o meio ambiente.</p>
+                    <p>A tecnologia aplicada ao manejo preciso (como sensores de umidade e temperatura) evita o desperdício de água potável e energia elétrica, provando que o futuro do agro é sustentável.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="agrinho" class="aba-conteudo">
+            <h2>Concurso Agrinho 2026</h2>
+            <div class="conteudo-agrinho">
+                <img src="logo-agrinho.png" alt="Logotipo Concurso Agrinho 2026" class="img-agrinho">
+                
+                <h3>Tema: Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</h3>
+                <p>O Concurso Agrinho é uma iniciativa essencial que estimula o desenvolvimento de soluções inovadoras no ambiente escolar, trazendo a realidade do campo para as salas de aula.</p>
+                <p>O tema deste ano nos convida a refletir sobre a segurança alimentar global unida à preservação dos ecossistemas. Este ecossistema digital simulado representa exatamente essa sinergia: produzir alimentos de alta qualidade (morangos) otimizando cada gota de água e recurso energético.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Projeto Agrinho: Agro Forte, Futuro Sustentável.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
